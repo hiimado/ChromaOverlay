@@ -59,9 +59,7 @@ namespace ChromaOverlay
             double startY = (SystemParameters.PrimaryScreenHeight - (Rows * CellSize)) / 2;
 
             for (int row = 0; row < Rows; row++) {
-                {
                     for (int col = 0; col < Columns; col++) {
-                        {
                             double x = startX + (col * CellSize);
                             double y = startY + (row * CellSize);
 
@@ -90,9 +88,7 @@ namespace ChromaOverlay
                             Canvas.SetLeft(label, x + 4);
                             Canvas.SetTop(label, y + 4);
                             OverlayCanvas.Children.Add(label);
-                        }
                     }
-                }
             } 
         }
     }
