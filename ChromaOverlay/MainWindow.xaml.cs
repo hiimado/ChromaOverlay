@@ -20,12 +20,23 @@ namespace ChromaOverlay
     {
         private NotifyIcon trayIcon;
         private ContextMenuStrip trayMenu;
-
+        private OverlayWindow overlayWindow;
         public MainWindow()
         {
 
             InitializeComponent();
             SetupTray();
+            ShowOverlay();
+        }
+
+        private void ShowOverlay()
+        {
+            if (overlayWindow == null)
+            {
+                overlayWindow = new OverlayWindow();
+            }
+
+            overlayWindow.Show();
         }
 
         private void SetupTray()
